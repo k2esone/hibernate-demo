@@ -12,12 +12,19 @@ public class Main {
         try (Session session = HibernateUtil.INSTANCE.getSessionFactory().openSession()) {
             Transaction transaction = session.beginTransaction();
 
-            // tworzymy studenta
-            Student student = new Student();
-            student.setImie("Pawel");
-            student.setDataUrodzenia(LocalDate.of(1990, 1, 3));
-            student.setKierunekNauczania("Informatyka");
-            student.setIndeks("123123");
+//            // tworzymy studenta
+//            Student student = new Student();
+//            student.setImie("Pawel");
+//            student.setDataUrodzenia(LocalDate.of(1990, 1, 3));
+//            student.setKierunekNauczania("Informatyka");
+//            student.setIndeks("123123");
+
+            Student student = Student.builder()
+                    .dataUrodzenia(LocalDate.of(1990, 1, 3))
+                    .kierunekNauczania("Informatyka")
+                    .indeks("123123")
+                    .imie("Pawel")
+                    .build();
 
             // zapisujemy studenta
             session.persist(student);
