@@ -5,11 +5,16 @@ import org.hibernate.Transaction;
 
 import java.time.LocalDate;
 
-public class MainInsert {
+public class MainCreate_Insert {
     public static void main(String[] args) {
         // wywolaj try-with-resources ktory zamknie sesje automatycznie po opuszczeniu try
         try (Session session = HibernateUtil.INSTANCE.getSessionFactory().openSession()) {
             Transaction transaction = session.beginTransaction();
+
+            // CREATE
+            // READ
+            // UPDATE
+            // DELETE
 
 //            // tworzymy studenta
 //            Student student = new Student();
