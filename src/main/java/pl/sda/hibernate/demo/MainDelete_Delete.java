@@ -16,7 +16,7 @@ public class MainDelete_Delete {
 
             // jesli udalo sie znalezc
             if (student != null) {
-                // DELETE FROM Student WHER id = 2L
+                // DELETE FROM Student WHERE id = 2L
                 session.remove(student);
             }
 
